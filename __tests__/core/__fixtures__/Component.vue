@@ -2,16 +2,16 @@
   <div>Hello world</div>
 </template>
 
-<script>
+<script lang='ts'>
 /**
  * @vue-data {String} [foo=bar] Foo description
  */
 export default {
   name: 'Component',
-  data() {
+  data(): { foo: string } {
     return {
       foo: 'bar'
     }
-  }
+  },
 }
 </script>
