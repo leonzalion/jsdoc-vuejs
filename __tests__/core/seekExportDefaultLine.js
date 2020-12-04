@@ -11,7 +11,7 @@ const readComponent = (componentPath, cb) => {
 describe('core.seekExportDefaultLine', () => {
   test('A normal component', (done) => {
     readComponent('Component.vue', (source) => {
-      expect(seekExportDefaultLine(source)).toBe(9);
+      expect(seekExportDefaultLine(source)).toBe(33);
       done();
     });
   });

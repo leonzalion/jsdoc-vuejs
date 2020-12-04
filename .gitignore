@@ -60,3 +60,5 @@ typings/
 example/docs*
 cypress/screenshots/
 cypress/videos/
+
+.npmrc

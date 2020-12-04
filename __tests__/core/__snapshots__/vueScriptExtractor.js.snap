@@ -1,17 +1,81 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`core.extractVueScript extract script 1`] = `
-"/**
- * @vue-data {String} [foo=bar] Foo description
- */
-export default {
-  name: 'Component',
+"import { matLock, matVisibility, matVisibilityOff } from '@quasar/extras/material-icons';
+import { computed, defineComponent, ref } from '@vue/composition-api';
 
-  data() {
+/**
+ * A password input component for forms.
+ */
+export default defineComponent({
+  name: 'FormPasswordInput',
+  inheritAttrs: false,
+  props: {
+    /**
+     * The current value of the password form input field
+     * @model
+     */
+    value: {
+      type: String,
+      required: true
+    },
+
+    /**
+     * The label of the password field
+     */
+    label: {
+      type: String,
+      default: 'Password'
+    },
+
+    /**
+     * Whether or not the password is currently visible
+     */
+    visible: {
+      type: Boolean,
+      default: false
+    },
+
+    /**
+     * Whether or not to deactivate the default prepend slot with a lock
+     */
+    noPrepend: {
+      type: Boolean,
+      default: false
+    },
+
+    /**
+     * Whether to disable the password type on the input box and instead use
+     * a password mask font (for preventing password managers from activating
+     * password autofill)
+     */
+    noTypePassword: {
+      type: Boolean,
+      default: false
+    }
+  },
+
+  setup() {
+    const input = ref();
+
+    function validate() {
+      if (input.value) {
+        input.value.validate();
+      }
+    }
+
+    const hasError = computed(() => {
+      return input.value?.hasError;
+    });
     return {
-      foo: 'bar'
+      input,
+      validate,
+      hasError,
+      matLock,
+      matVisibilityOff,
+      matVisibility
     };
   }
 
-};"
+});"
 `;

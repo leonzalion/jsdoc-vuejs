@@ -1,7 +1,7 @@
 {
-  "name": "jsdoc-vuejs",
-  "version": "0.0.0-development",
-  "description": "A JSDoc plugin for documenting .vue files.",
+  "name": "jsdoc-vuejs-ts",
+  "version": "1.0.0",
+  "description": "A JSDoc plugin for documenting .vue files with TypeScript support.",
   "main": "index.js",
   "files": [
     "lib",
@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Kocal/jsdoc-vuejs.git"
+    "url": "https://github.com/leonzalion/jsdoc-vuejs.git"
   },
   "keywords": [
     "jsdoc",
@@ -22,12 +22,12 @@
     "vue component",
     "vue file"
   ],
-  "author": "Hugo Alliaume <kocal@live.fr>",
+  "author": "Leon Si <leonzalion@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Kocal/jsdoc-vuejs/issues"
+    "url": "https://github.com/leonzalion/jsdoc-vuejs/issues"
   },
-  "homepage": "https://github.com/Kocal/jsdoc-vuejs#readme",
+  "homepage": "https://github.com/leonzalion/jsdoc-vuejs#readme",
   "engines": {
     "node": "^10.13.0 || >=12.0.0"
   },
