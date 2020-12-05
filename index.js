@@ -38,6 +38,10 @@ exports.handlers = {
       e.doclet.longname = `module:${componentName}`;
     }
 
+    if (exportDefaultLines[fullPath] != null) {
+      e.doclet.meta.lineno = exportDefaultLines[fullPath];
+    }
+
     if (
       !/[.~#]/.test(e.doclet.longname) // filter component's properties and member, not the best way but it werks
       && e.doclet.longname.startsWith('module:')
@@ -72,7 +76,7 @@ exports.handlers = {
         e.doclet.scope = 'instance';
         e.doclet.memberof = e.doclet.memberof.replace(/\.methods$/, ''); // force method to be displayed
         if (fileIsSingleFileComponent) {
-          e.doclet.meta.lineno += exportDefaultLines[fullPath] - mainDocletLines[fullPath];
+          // e.doclet.meta.lineno += exportDefaultLines[fullPath] - mainDocletLines[fullPath];
         }
       } else {
         e.doclet.memberof = null; // don't include Vue hooks

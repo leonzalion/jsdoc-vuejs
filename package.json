@@ -38,7 +38,7 @@
   },
   "peerDependencies": {
     "jsdoc": ">=3.0.0",
-    "vue-template-compiler": ">= 2.0.0"
+    "vue-template-compiler": "^2.6.12"
   },
   "devDependencies": {
     "@kocal/semantic-release-preset": "^2.0.6",
@@ -50,6 +50,6 @@
     "jest": "^24.0.0",
     "jsdoc": "^3.6.2",
     "semantic-release": "^17.1.1",
-    "vue-template-compiler": "^2.5.21"
+    "vue-template-compiler": "^2.6.12"
   }
 }
